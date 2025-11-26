@@ -56,4 +56,11 @@ with mlflow.start_run(run_name="study") as run:
     best_run_id = study.best_trial.user_attrs.get("run_id")
     mlflow.log_param("best_child_run_id", best_run_id)
 
-    mlflow.register_model(f"runs:/{best_run_id}/model", "best_random_forest")
+    result = mlflow.register_model(f"runs:/{best_run_id}/model", "best_random_forest")
+
+    client = mlflow.tracking.MlflowClient()
+    client.transition_model_version_stage(
+        name="best_random_forest",
+        version=result.version,
+        stage="Production",
+    )
