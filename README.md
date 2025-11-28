@@ -4,10 +4,10 @@ Repository that containts code related to my MLFlow training.
 
 MLflow is an open-source platform for managing the machine learning lifecycle. It helps teams track experiments, package models, and deploy them efficiently. Its main components are:
 
-Tracking – Log and compare parameters, metrics, and artifacts from ML experiments.
-Projects – Define reproducible ML workflows using a standard format.
-Models – Package ML models for deployment in various environments.
-Model Registry – Manage versions of models, including staging and production.
+- Tracking – Log and compare parameters, metrics, and artifacts from ML experiments.
+- Projects – Define reproducible ML workflows using a standard format.
+- Models – Package ML models for deployment in various environments.
+- Model Registry – Manage versions of models, including staging and production.
 
 ## Project
 My project is develop in python, with a Makefile that ensures all dependencies are correctly installed in a virtual environment to allow for containerized reproducibility.
